@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libro Digital PDF</title>
+
+<link rel="stylesheet" href="styles.css">
+<script>
+(function () {
+  const esDesktop =
+    navigator.maxTouchPoints === 0 &&
+    !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (esDesktop) {
+    // 🔒 Bloqueo inmediato
+    window.location.replace('../desktop/index.html');
+  }
+})();
+</script>
+<!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<!-- Tu JS principal -->
+<script src="main.js" defer></script>
+</head>
+
+<body>
+
+<div id="pdf-wrapper">
+  <canvas id="pdf-canvas"></canvas>
+</div>
+
+<footer>
+  By 
+  <a href="https://w3l33.github.io/" target="_blank">WeLee</a>
+</footer>
+
+</body>
+</html>
