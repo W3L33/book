@@ -1,0 +1,43 @@
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  padding-bottom: env(safe-area-inset-bottom);
+  color: #ffffff;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+footer a {
+  color: #ffdb58;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#flipbook {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  #flipbook {
+    width: 100%;
+    height: auto;
+  }
+}

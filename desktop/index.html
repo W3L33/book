@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Libro PDF</title>
+<link rel="stylesheet" href="styles.css">
+<script>
+(function () {
+  const esMovil =
+    /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+    navigator.maxTouchPoints > 0;
+
+  if (esMovil) {
+    // 🔒 Bloqueo inmediato
+    window.location.replace('../mobile/index.html');
+  }
+})();
+</script>
+  <style>
+    body { margin: 0; background: #333; color: white; }
+    #flipbook { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+
+<div id="flipbook"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+<script src="main.js"></script>
+<footer>
+    By 
+    <a href="https://w3l33.github.io/" target="_blank">
+        WeLee
+    </a>
+</footer>
+
+</body>
+
+</html>
